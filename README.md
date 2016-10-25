@@ -15,6 +15,7 @@ My [Home Assistant](https://home-assistant.io/) Configuration Files
 
 ## Device Wishlist
 - [Ecobee3](https://www.amazon.com/gp/product/B00ZIRV39M/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00ZIRV39M&linkCode=as2&tag=tzonkov-20&linkId=092b7b794b3b6c099e94a5f6cfbb33af) Smart Thermostat
+- Logitech Harmony [Elite All in One](https://www.amazon.com/gp/product/B014PDFP9S/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B014PDFP9S&linkCode=as2&tag=tzonkov-20&linkId=e3b94e1772f1a4ceb25430e963b57aba) Remote 
 
 ## Disclosure
 Alex Tzonkov is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com.
