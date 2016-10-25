@@ -28,16 +28,16 @@
       message: Alex is driving home.
 
 - alias: Increase icloud interval after 4pm
-    trigger:
-      platform: time
+  trigger:
+    - platform: time
       after: '16:00:00'
-    condition:
-      condition: state
+  condition:
+    - condition: state
       entity_id: device_tracker.alexsiphone6plus
       state: 'Work'
-    action:
-      - service: icloud.setinterval
-        data:
-          account_name: 'alex'
-          interval: 1
-          device_name: 'alexsiphone6plus'
+  action:
+    - service: icloud.setinterval
+      data:
+        account_name: 'alex'
+        interval: 1
+        device_name: 'alexsiphone6plus'
