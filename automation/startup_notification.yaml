@@ -1,0 +1,13 @@
+###################################
+##  Start Up Section
+###################################
+
+- alias: Startup Notification
+  hide_entity: True
+  trigger:
+    platform: event
+    event_type: homeassistant_start
+  action:
+    service: notify.telegram_home_assistant
+    data:
+        message: Home Assistant is up and running.

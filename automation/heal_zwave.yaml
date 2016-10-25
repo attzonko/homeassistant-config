@@ -1,0 +1,10 @@
+###################################
+##  ZWave Healing Section
+###################################
+
+- alias: Heal ZWave Nightly
+  trigger:
+    platform: time
+    after: '3:30:00'
+  action:
+    service: zwave.heal_network    

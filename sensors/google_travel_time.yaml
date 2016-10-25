@@ -1,0 +1,21 @@
+############################################################
+#
+# Google Travel Time Sensors
+#
+############################################################
+
+- platform: google_travel_time
+  name: Jordan to School
+  api_key: !secret google_travel_api
+  origin: zone.home
+  destination: zone.school
+  options:
+    mode: driving
+
+- platform: google_travel_time
+  name: Alex to Home
+  api_key: !secret google_travel_api
+  origin: zone.work
+  destination: zone.home
+  options:
+    mode: driving
