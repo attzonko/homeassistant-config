@@ -1,0 +1,40 @@
+################################################################
+## Automation / Plex
+################################################################
+- alias: Turn on kitchen lights when watching Plex
+  trigger:
+    platform: state
+    entity_id: media_player.rasplexfam
+    from: 'playing'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+      - condition: state
+        entity_id: input_boolean.family_room_plex_automation
+        state: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id:
+      - group.kitchen_lights
+
+- alias: Turn off kitchen lights when watching Plex
+  trigger:
+    platform: state
+    entity_id: media_player.rasplexfam
+    to: 'playing'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+      - condition: state
+        entity_id: input_boolean.family_room_plex_automation
+        state: 'on'
+  action:
+    service: homeassistant.turn_off
+    entity_id:
+      - group.kitchen_lights

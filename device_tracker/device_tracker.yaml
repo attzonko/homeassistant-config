@@ -1,0 +1,14 @@
+################################################################
+## Device Tracker
+################################################################
+
+################################################
+## AsusWRT
+################################################
+
+- platform: netgear
+  host: !secret netgear_host
+  username: !secret netgear_username
+  password: !secret netgear_password
+  port: !secret netgear_port
+  interval_seconds: 60

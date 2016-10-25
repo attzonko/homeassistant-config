@@ -1,0 +1,27 @@
+################################################################
+## Automation / Alex Work
+################################################################
+- alias: "Alex Leaves Work"
+  trigger:
+    - platform: zone
+      entity_id: device_tracker.alexsiphone6plus
+      zone: zone.work
+      event: leave
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.leaving_work
+        state: 'on'
+      - condition: time
+        after: '15:00:00'
+        before: '23:00:00'
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+  action:
+    service: ifttt.trigger
+    data: {"event":"alex_leaves_work"}

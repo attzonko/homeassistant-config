@@ -1,0 +1,20 @@
+################################################################
+## Logger
+################################################################
+
+# Log Severities: notset, debug, info, warn, warning, error, fatal, critical
+
+default: info
+logs:
+  homeassistant.components.device_tracker.netgear: error
+  homeassistant.components.discovery: warn
+  homeassistant.components.http: warn
+  homeassistant.components.zone: warn
+  homeassistant.components.zwave: error
+  homeassistant.core: warn
+  pynetgear: error
+  phue: warn
+  plexapi: warn
+  pyicloud.base: warn
+  requests.packages.urllib3.connectionpool: error
+  urllib3.connectionpool: error

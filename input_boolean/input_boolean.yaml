@@ -1,0 +1,9 @@
+leaving_work:
+  name: Send leaving work notifications
+  icon: mdi:comment-text
+  initial: on
+
+family_room_plex_automation:
+  name: Automated kitchen lights based on Plex
+  icon: mdi:plex
+  initial: on

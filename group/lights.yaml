@@ -1,0 +1,25 @@
+################################################################
+## Group / Lights
+################################################################
+
+################################################
+## Individual Lights
+################################################
+
+
+
+################################################
+## Grouped Lights
+################################################
+kitchen_lights:
+  name: Kitchen Lights
+  entities:
+    - switch.kitchen_counter_switch_4_0
+    - switch.kitchen_overhead_switch_3_0
+    - light.kitchen_table_level_5_0
+
+porch_lights:
+  name: Porch Lights
+  entities:
+    - switch.front_porch_switch_2_0
+    - switch.driveway_lights_switch_6_0

@@ -1,0 +1,56 @@
+################################################################
+## Configuration
+################################################################
+
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  time_zone: America/Los_Angeles
+  unit_system: imperial
+
+
+frontend:
+history:
+logbook:
+sun:
+updater:
+emulated_hue:
+
+################################################
+## Components (Non-Includes)
+################################################
+
+http:
+  api_password: !secret http_api_password
+  server_port: !secret http_server_port
+
+ifttt:
+  key: !secret ifttt_key
+recorder:
+  purge_days: 7
+
+################################################
+## Component Includes (Single File)
+################################################
+
+icloud: !include icloud.yaml
+logger: !include logger.yaml
+zwave: !include zwave.yaml
+
+################################################
+## Component Includes (Merge List)
+################################################
+
+automation: !include_dir_merge_list automation
+device_tracker: !include_dir_merge_list device_tracker
+media_player: !include_dir_merge_list media_player
+zone: !include_dir_merge_list zone
+
+################################################
+## Component Includes (Merge Named)
+################################################
+
+group: !include_dir_merge_named group
+input_boolean: !include_dir_merge_named input_boolean
