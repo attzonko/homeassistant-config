@@ -1,0 +1,18 @@
+################################################################
+## Notify
+################################################################
+
+################################################
+## Telegram
+################################################
+
+- platform: telegram
+  name: telegram_home_chat
+  api_key: !secret telegram_api_key
+  chat_id: !secret telegram_home_chat_id
+
+- platform: telegram
+  name: telegram_home_assistant
+  api_key: !secret telegram_api_key
+  chat_id: !secret telegram_home_assistant_id
+

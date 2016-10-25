@@ -46,6 +46,7 @@ zwave: !include zwave.yaml
 automation: !include_dir_merge_list automation
 device_tracker: !include_dir_merge_list device_tracker
 media_player: !include_dir_merge_list media_player
+notify: !include_dir_merge_list notify
 zone: !include_dir_merge_list zone
 
 ################################################

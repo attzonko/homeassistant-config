@@ -14,8 +14,8 @@
         entity_id: input_boolean.leaving_work
         state: 'on'
       - condition: time
-        after: '15:00:00'
-        before: '23:00:00'
+        after: '16:00:00'
+        before: '21:00:00'
         weekday:
           - mon
           - tue
@@ -23,5 +23,21 @@
           - thu
           - fri
   action:
-    service: ifttt.trigger
-    data: {"event":"alex_leaves_work"}
+    service: notify.telegram_home_chat
+    data:
+      message: Alex is driving home.
+
+- alias: Increase icloud interval after 4pm
+    trigger:
+      platform: time
+      after: '16:00:00'
+    condition:
+      condition: state
+      entity_id: device_tracker.alexsiphone6plus
+      state: 'Work'
+    action:
+      - service: icloud.setinterval
+        data:
+          account_name: 'alex'
+          interval: 1
+          device_name: 'alexsiphone6plus'
