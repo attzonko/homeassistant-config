@@ -28,6 +28,7 @@ http:
 
 ifttt:
   key: !secret ifttt_key
+
 recorder:
   purge_days: 7
 
