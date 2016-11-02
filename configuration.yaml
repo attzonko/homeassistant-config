@@ -25,12 +25,22 @@ emulated_hue:
 http:
   api_password: !secret http_api_password
   server_port: !secret http_server_port
+  ssl_certificate: !secret http_ssl_certificate
+  ssl_key: !secret http_ssl_key
+
 
 ifttt:
   key: !secret ifttt_key
 
 recorder:
   purge_days: 7
+
+mqtt:
+  broker: 10.0.1.125
+  port: 1883
+  client_id: home-assistant-1
+  username: !secret mqtt_username
+  password: !secret mqtt_password
 
 ################################################
 ## Component Includes (Single File)
