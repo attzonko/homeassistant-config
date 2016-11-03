@@ -46,7 +46,6 @@ mqtt:
 ## Component Includes (Single File)
 ################################################
 
-icloud: !include icloud.yaml
 logger: !include logger.yaml
 zwave: !include zwave.yaml
 

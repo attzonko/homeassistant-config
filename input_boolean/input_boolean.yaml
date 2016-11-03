@@ -1,3 +1,8 @@
+leaving_school:
+  name: Send leaving school notifications
+  icon: mdi:comment-text
+  initial: on
+
 leaving_work:
   name: Send leaving work notifications
   icon: mdi:comment-text

@@ -1,21 +1,19 @@
 ################################################################
-## Automation / Alex Work
+## Automation / Jordan School
 ################################################################
-- alias: "Alex Leaves Work"
+- alias: "Jordan Leaves School"
   trigger:
     - platform: zone
-      entity_id: device_tracker.alexsiphone6plus
-      zone: zone.work
+      entity_id: device_tracker.jordansiphone5s
+      zone: zone.school
       event: leave
   condition:
     condition: and
     conditions:
       - condition: state
-        entity_id: input_boolean.leaving_work
+        entity_id: input_boolean.leaving_school
         state: 'on'
       - condition: time
-        after: '16:00:00'
-        before: '21:00:00'
         weekday:
           - mon
           - tue
@@ -25,19 +23,19 @@
   action:
     service: notify.telegram_home_chat
     data:
-      message: Alex is driving home.
+      message: Jordan left school.
 
 - alias: Increase icloud interval after 4pm
   trigger:
     - platform: time
-      after: '16:00:00'
+      after: '14:00:00'
   condition:
     - condition: state
-      entity_id: device_tracker.alexsiphone6plus
-      state: 'Work'
+      entity_id: device_tracker.jordansiphone5s
+      state: 'School'
   action:
     - service: device_tracker.icloud_set_interval
       data:
         account_name: alex
-        device_name: alexsiphone6plus
+        device_name: jordansiphone5s
         interval: 1

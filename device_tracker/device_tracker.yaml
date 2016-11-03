@@ -12,3 +12,7 @@
   password: !secret netgear_password
   port: !secret netgear_port
   interval_seconds: 60
+- platform: icloud
+  account_name: alex
+  username: !secret icloud_username
+  password: !secret icloud_password
