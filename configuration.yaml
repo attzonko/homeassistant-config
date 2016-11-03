@@ -9,7 +9,7 @@ homeassistant:
   elevation: !secret home_elevation
   time_zone: America/Los_Angeles
   unit_system: imperial
-
+  customize: !include customize.yaml
 
 frontend:
 history:

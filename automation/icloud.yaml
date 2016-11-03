@@ -1,0 +1,81 @@
+- alias: Alex NMAP is different from icloud
+  trigger:
+    platform: state
+    entity_id: device_tracker.alexsiphone6plus_nmap
+  condition:
+    condition: template
+    value_template: "{{ states.device_tracker.alexsiphone6plus_nmap.state != states.device_tracker.alexsiphone6plus.state }}"
+  action:
+    - service: device_tracker.icloud_set_interval
+      data:
+        account_name: alex
+        device_name: alexsiphone6plus
+        interval: 1
+
+- alias: Alex NMAP is the same as icloud
+  trigger:
+    platform: state
+    entity_id: device_tracker.alexsiphone6plus_nmap
+  condition:
+    condition: template
+    value_template: "{{ states.device_tracker.alexsiphone6plus_nmap.state == states.device_tracker.alexsiphone6plus.state }}"
+  action:
+    - service: device_tracker.icloud_set_interval
+      data:
+        account_name: alex
+        device_name: alexsiphone6plus
+
+- alias: Amy NMAP is different from icloud
+  trigger:
+    platform: state
+    entity_id: device_tracker.amysiphone6_nmap
+  condition:
+    condition: template
+    value_template: "{{ states.device_tracker.amysiphone6_nmap.state != states.device_tracker.amysiphone6.state }}"
+  action:
+    - service: device_tracker.icloud_set_interval
+      data:
+        account_name: alex
+        device_name: amysiphone6
+        interval: 1
+
+- alias: Amy NMAP is the same as icloud
+  trigger:
+    platform: state
+    entity_id: device_tracker.amysiphone6_nmap
+  condition:
+    condition: template
+    value_template: "{{ states.device_tracker.amysiphone6_nmap.state == states.device_tracker.amysiphone6.state }}"
+  action:
+    - service: device_tracker.icloud_set_interval
+      data:
+        account_name: alex
+        device_name: amysiphone6
+
+
+- alias: Jordan NMAP is different from icloud
+  trigger:
+    platform: state
+    entity_id: device_tracker.jordansiphone5s_nmap
+  condition:
+    condition: template
+    value_template: "{{ states.device_tracker.jordansiphone5s_nmap.state != states.device_tracker.jordansiphone5s.state }}"
+  action:
+    - service: device_tracker.icloud_set_interval
+      data:
+        account_name: alex
+        device_name: jordansiphone5s
+        interval: 1
+
+- alias: Jordan NMAP is the same as icloud
+  trigger:
+    platform: state
+    entity_id: device_tracker.jordansiphone5s_nmap
+  condition:
+    condition: template
+    value_template: "{{ states.device_tracker.jordansiphone5s_nmap.state == states.device_tracker.jordansiphone5s.state }}"
+  action:
+    - service: device_tracker.icloud_set_interval
+      data:
+        account_name: alex
+        device_name: jordansiphone5s

@@ -1,0 +1,34 @@
+################################################################
+## Customize
+################################################################
+
+################################################
+## Device Tracker
+################################################
+
+device_tracker.alexsiphone6plus:
+  friendly_name: Alex (iPhone)
+  icon: mdi:cellphone-iphone
+
+device_tracker.alexsiphone6plus_nmap:
+  friendly_name: Alex iPhone NMAP
+  icon: mdi:cellphone-iphone
+  hidden: true
+
+device_tracker.amysiphone6:
+  friendly_name: Amy (iPhone)
+  icon: mdi:cellphone-iphone
+
+device_tracker.amysiphone6_nmap:
+  friendly_name: Amy iPhone NMAP
+  icon: mdi:cellphone-iphone
+  hidden: true
+
+device_tracker.jordansiphone5s:
+  friendly_name: Jordan (iPhone)
+  icon: mdi:cellphone-iphone
+
+device_tracker.jordansiphone5s_nmap:
+  friendly_name: Jordan iPhone NMAP
+  icon: mdi:cellphone-iphone
+  hidden: true
