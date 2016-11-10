@@ -13,7 +13,23 @@
     mode: driving
 
 - platform: google_travel_time
+  name: Amy to Home
+  api_key: !secret google_travel_api
+  origin: device_tracker.amysiphone6
+  destination: zone.home
+  options:
+    mode: driving
+
+- platform: google_travel_time
   name: Alex to Home
+  api_key: !secret google_travel_api
+  origin: device_tracker.alexsiphone6plus
+  destination: zone.home
+  options:
+    mode: driving
+
+- platform: google_travel_time
+  name: Work to Home
   api_key: !secret google_travel_api
   origin: zone.work
   destination: zone.home

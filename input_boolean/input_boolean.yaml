@@ -3,6 +3,11 @@ leaving_school:
   icon: mdi:comment-text
   initial: on
 
+entering_school:
+  name: Send entering school notifications
+  icon: mdi:comment-text
+  initial: on
+
 leaving_work:
   name: Send leaving work notifications
   icon: mdi:comment-text

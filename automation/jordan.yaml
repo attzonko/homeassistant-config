@@ -25,7 +25,22 @@
     data:
       message: Jordan left school.
 
-- alias: Increase icloud interval after 4pm
+- alias: "Jordan Arrives at School"
+  trigger:
+    - platform: zone
+      entity_id: device_tracker.jordansiphone5s
+      zone: zone.school
+      event: enter
+  condition:
+    condition: state
+    entity_id: input_boolean.entering_school
+    state: 'on'
+  action:
+    service: notify.telegram_home_chat
+    data:
+      message: Jordan got to school.
+
+- alias: Increase icloud interval after 2pm
   trigger:
     - platform: time
       after: '14:00:00'

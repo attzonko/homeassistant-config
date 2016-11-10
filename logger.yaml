@@ -6,11 +6,13 @@
 
 default: info
 logs:
-  homeassistant.components.device_tracker.netgear: error
+  homeassistant.components.device_tracker.nmap: error
   homeassistant.components.discovery: warn
   homeassistant.components.http: warn
   homeassistant.components.zone: warn
   homeassistant.components.zwave: error
+  homeassistant.helpers.script: warn
+  homeassistant.components.automation: warn
   homeassistant.core: warn
   pynetgear: error
   phue: warn
