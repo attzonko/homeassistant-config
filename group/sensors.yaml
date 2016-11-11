@@ -1,0 +1,15 @@
+################################################################
+## Group / Lights
+################################################################
+
+
+################################################
+## Grouped Lights
+################################################
+travel_time:
+  name: Travel Times
+  entities:
+    - sensor.alex_to_home  
+    - sensor.amy_to_home
+    - sensor.home_to_school
+    - sensor.work_to_home

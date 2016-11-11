@@ -1,19 +1,19 @@
 ################################################################
 ## Zone
 ################################################################
-- name: Home
+- name: home
   latitude: !secret home_latitude
   longitude: !secret home_longitude
   radius: 50
   icon: mdi:home
 
-- name: Work
+- name: work
   latitude: !secret work_latitude
   longitude: !secret work_longitude
   radius: 350
   icon: mdi:city
 
-- name: School
+- name: school
   latitude: !secret school_latitude
   longitude: !secret school_longitude
   radius: 400

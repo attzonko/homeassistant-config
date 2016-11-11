@@ -1,0 +1,45 @@
+################################################################
+## Group / Default
+################################################################
+
+################################################
+## Default
+################################################
+default_view:
+  name: Tzonkov Home
+  view: yes
+  entities:
+    - persistent_notification.update_available
+    - persistent_notification.httplogin
+    - sun.sun
+    - group.all_devices
+    - group.travel_time
+    - group.input_boolean
+
+################################################
+## Lights View
+################################################
+lights:
+  name: Lights
+  view: yes
+  entities: 
+    - group.kitchen_lights
+    - group.porch_lights
+
+################################################
+## Automations
+################################################
+automations:
+  name: Automation
+  view: yes
+  entities:
+    - group.all_automations
+
+################################################
+## Automations
+################################################
+media:
+  name: media
+  view: yes
+  entities:
+    - media_player.plex

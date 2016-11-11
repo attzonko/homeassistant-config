@@ -1,0 +1,9 @@
+################################################
+## Misc
+################################################
+group.all_automations:
+  hidden: false
+group.all_scripts:
+  hidden: false
+group.all_devices:
+  hidden: false
