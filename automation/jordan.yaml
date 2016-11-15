@@ -49,6 +49,9 @@
       entity_id: device_tracker.jordansiphone5s
       state: 'School'
   action:
+    - service: notify.telegram_home_assistant
+      data:
+        message: Increased jordansiphone5s interval to 1 min
     - service: device_tracker.icloud_set_interval
       data:
         account_name: alex

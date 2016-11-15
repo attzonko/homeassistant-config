@@ -10,11 +10,12 @@ default_view:
   view: yes
   entities:
     - persistent_notification.update_available
-    - persistent_notification.httplogin
     - sun.sun
-    - group.all_devices
     - group.travel_time
+    - group.all_devices
+    - group.system_monitor
     - group.input_boolean
+    - persistent_notification.httplogin
 
 ################################################
 ## Lights View
@@ -42,4 +43,6 @@ media:
   name: media
   view: yes
   entities:
-    - media_player.plex
+    - media_player.rasplexfam
+    - media_player.alexs_iphone_6_plus
+    - media_player.plex_web_chrome

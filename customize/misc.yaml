@@ -7,3 +7,8 @@ group.all_scripts:
   hidden: false
 group.all_devices:
   hidden: false
+
+
+sensor.cpu_temperature:
+      friendly_name: 'CPU Temp'
+      unit_of_measurement: 'Celsius'

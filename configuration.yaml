@@ -23,55 +23,8 @@ emulated_hue:
 ## Testing Area
 ################################################
 
-# TODO: Move alexa intents to separate directory
 alexa:
-  intents:
-    JordanBoyfriend:
-      action:
-        service: notify.telegram_home_assistant
-        data:
-          message: Someone asked who is Jordan's boyfriend. 
-      speech:
-        type: plaintext
-        text: >
-            Hmm...currently, it is Nathan Erlich.
-      card:
-        type: simple
-        title: Jordan's Boyfriend
-        content: Skill used to keep track of who is Jordan's current boyfriend
-    LocateIntent:
-      action:
-        service: notify.telegram_home_assistant
-        data_template:
-          message: Someone asked where is {{ User }} 
-      speech:
-        type: plaintext
-        text: >
-          {% if User.lower() in states.device_tracker|map(attribute='name')|map('lower') %}
-              {% if User.lower() == "alex" %}
-                  {% if states.device_tracker.alexsiphone6plus.state.lower() == "work" %}
-                      Alex is at work.
-                  {% elif states.device_tracker.alexsiphone6plus.state.lower() == "not_home" %}
-                      Alex is {{states.sensor.alex_to_home.state}} minutes from home.
-                  {% else %}
-                      Alex is at {{states.device_tracker.alexsiphone6plus.state.lower()}}
-                  {% endif %}
-              {% elif User.lower() == "amy" %}     
-                  {% if states.device_tracker.amysiphone6.state.lower() == "not_home" %}
-                      Amy is {{states.sensor.amy_to_home.state }} minutes from home.
-                  {% else %}
-                      Amy is at {{states.device_tracker.amysiphone6.state.lower()}}
-                  {% endif %}
-              {% else %}
-                   I am currently not tracking {{User}}'s location.
-              {% endif %}
-          {% else %}
-              I have no idea who {{User}} is. 
-          {% endif %}
-      card:
-        type: simple
-        title: Locate Family
-        content: Skill used to help locate family members
+  intents: !include_dir_named alexa
 
 ################################################
 ## Components (Non-Includes)

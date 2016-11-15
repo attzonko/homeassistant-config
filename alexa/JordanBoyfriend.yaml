@@ -1,0 +1,13 @@
+speech:
+  type: plaintext
+  text: >
+          {{ [
+          "Hmm...currently, it is Adam Sandler.",
+          "I don't know who it is today she changes them frequently.",
+          "Boyfriend? She better not have a boyfriend!",
+          ] | random }} 
+
+card:
+  type: simple
+  title: Jordan's Boyfriend
+  content: Skill used to keep track of who is Jordan's current boyfriend

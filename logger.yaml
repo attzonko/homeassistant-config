@@ -11,6 +11,7 @@ logs:
   homeassistant.components.http: warn
   homeassistant.components.zone: warn
   homeassistant.components.zwave: error
+  homeassistant.components.sensor.command_line: warn
   homeassistant.helpers.script: warn
   homeassistant.components.automation: warn
   homeassistant.core: warn
