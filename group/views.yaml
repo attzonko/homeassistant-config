@@ -10,7 +10,7 @@ default_view:
   view: yes
   entities:
     - persistent_notification.update_available
-    - sun.sun
+    - group.weather
     - group.travel_time
     - group.all_devices
     - group.system_monitor
@@ -20,7 +20,7 @@ default_view:
 ################################################
 ## Lights View
 ################################################
-lights:
+lights_view:
   name: Lights
   view: yes
   entities: 
@@ -30,19 +30,28 @@ lights:
 ################################################
 ## Automations
 ################################################
-automations:
+automations_view:
   name: Automation
   view: yes
   entities:
     - group.all_automations
 
 ################################################
-## Automations
+## Media
 ################################################
-media:
-  name: media
+media_view:
+  name: Media
   view: yes
   entities:
     - media_player.rasplexfam
     - media_player.alexs_iphone_6_plus
     - media_player.plex_web_chrome
+
+################################################
+## Weather
+################################################
+weather_view:
+  name: Weather
+  view: yes
+  entities:
+    - group.full_weather

@@ -34,7 +34,7 @@
   condition:
     - condition: state
       entity_id: device_tracker.alexsiphone6plus
-      state: 'Work'
+      state: 'work'
   action:
     - service: notify.telegram_home_assistant
       data:

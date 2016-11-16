@@ -47,7 +47,7 @@
   condition:
     - condition: state
       entity_id: device_tracker.jordansiphone5s
-      state: 'School'
+      state: 'school'
   action:
     - service: notify.telegram_home_assistant
       data:
