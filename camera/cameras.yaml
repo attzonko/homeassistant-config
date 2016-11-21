@@ -1,0 +1,17 @@
+- platform: mjpeg
+  mjpeg_url: !secret KITCHEN_CAM
+  name: Kitchen
+  username: !secret camera_username
+  password: !secret camera_password
+
+- platform: mjpeg
+  mjpeg_url: !secret BONUS_CAM
+  name: Bonus Room
+  username: !secret camera_username
+  password: !secret camera_password
+
+- platform: mjpeg
+  mjpeg_url: !secret LIVING_CAM
+  name: Living Room
+  username: !secret camera_username
+  password: !secret camera_password

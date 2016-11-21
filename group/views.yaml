@@ -17,6 +17,7 @@ default_view:
     - group.input_boolean
     - persistent_notification.httplogin
 
+
 ################################################
 ## Lights View
 ################################################
@@ -26,6 +27,17 @@ lights_view:
   entities: 
     - group.kitchen_lights
     - group.porch_lights
+
+################################################
+## Camera View
+################################################
+camera_view:
+  name: Cameras
+  view: yes
+  entities: 
+    - camera.kitchen
+    - camera.bonus_room
+    - camera.living_room
 
 ################################################
 ## Automations
