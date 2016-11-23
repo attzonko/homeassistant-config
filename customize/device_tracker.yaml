@@ -2,29 +2,29 @@
 ## Device Tracker
 ################################################
 
-device_tracker.alexsiphone6plus:
+device_tracker.alexiphone:
   friendly_name: Alex
   icon: mdi:cellphone-iphone
 
-device_tracker.alexsiphone6plus_nmap:
+device_tracker.alexiphone_nmap:
   friendly_name: Alex iPhone NMAP
   icon: mdi:cellphone-iphone
   hidden: true
 
-device_tracker.amysiphone6:
+device_tracker.amyiphone:
   friendly_name: Amy
   icon: mdi:cellphone-iphone
 
-device_tracker.amysiphone6_nmap:
+device_tracker.amyiphone_nmap:
   friendly_name: Amy iPhone NMAP
   icon: mdi:cellphone-iphone
   hidden: true
 
-device_tracker.jordansiphone5s:
+device_tracker.jordaniphone:
   friendly_name: Jordan
   icon: mdi:cellphone-iphone
 
-device_tracker.jordansiphone5s_nmap:
+device_tracker.jordaniphone_nmap:
   friendly_name: Jordan iPhone NMAP
   icon: mdi:cellphone-iphone
   hidden: true

@@ -14,6 +14,7 @@ logs:
   homeassistant.components.sensor.command_line: warn
   homeassistant.helpers.script: warn
   homeassistant.components.automation: warn
+  homeassistant.components.ecobee: warn
   homeassistant.core: warn
   pynetgear: error
   phue: warn

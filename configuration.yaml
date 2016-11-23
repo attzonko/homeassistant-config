@@ -17,7 +17,7 @@ logbook:
 sun:
 updater:
 emulated_hue:
-
+  expose_by_default: false
 
 ################################################
 ## Testing Area
@@ -40,8 +40,12 @@ http:
 ifttt:
   key: !secret ifttt_key
 
-recorder:
-  purge_days: 7
+#ecobee:
+#  api_key: !secret ecobee_api_key
+#  hold_temp: false
+
+#recorder:
+#  purge_days: 7
 
 mqtt:
   broker: 10.0.1.125

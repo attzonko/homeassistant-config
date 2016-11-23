@@ -15,7 +15,7 @@
 - platform: google_travel_time
   name: Amy to Home
   api_key: !secret google_travel_api
-  origin: device_tracker.amysiphone6
+  origin: device_tracker.amyiphone
   destination: zone.home
   options:
     mode: driving
@@ -23,7 +23,7 @@
 - platform: google_travel_time
   name: Alex to Home
   api_key: !secret google_travel_api
-  origin: device_tracker.alexsiphone6plus
+  origin: device_tracker.alexiphone
   destination: zone.home
   options:
     mode: driving

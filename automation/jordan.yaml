@@ -4,7 +4,7 @@
 - alias: "Jordan Leaves School"
   trigger:
     - platform: zone
-      entity_id: device_tracker.jordansiphone5s
+      entity_id: device_tracker.jordaniphone
       zone: zone.school
       event: leave
   condition:
@@ -28,7 +28,7 @@
 - alias: "Jordan Arrives at School"
   trigger:
     - platform: zone
-      entity_id: device_tracker.jordansiphone5s
+      entity_id: device_tracker.jordaniphone
       zone: zone.school
       event: enter
   condition:
@@ -46,14 +46,14 @@
       after: '14:00:00'
   condition:
     - condition: state
-      entity_id: device_tracker.jordansiphone5s
+      entity_id: device_tracker.jordaniphone
       state: 'school'
   action:
     - service: notify.telegram_home_assistant
       data:
-        message: Increased jordansiphone5s interval to 1 min
+        message: Increased jordaniphone interval to 1 min after 2pm
     - service: device_tracker.icloud_set_interval
       data:
         account_name: alex
-        device_name: jordansiphone5s
+        device_name: jordaniphone
         interval: 1

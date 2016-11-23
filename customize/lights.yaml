@@ -1,0 +1,34 @@
+switch.driveway_lights_switch_6_0:
+  emulated_hue: true
+  emulated_hue_name: "Driveway Lights"
+  friendly_name: "Driveway Lights"
+
+switch.front_porch_switch_2_0:
+  emulated_hue: true
+  emulated_hue_name: "Front Porch"
+  friendly_name: "Front Porch"
+
+switch.kitchen_counter_switch_4_0:
+  emulated_hue: true
+  emulated_hue_name: "Kitchen Counter"
+  friendly_name: "Kitchen Counter"
+
+switch.kitchen_overhead_switch_3_0:
+  emulated_hue: true
+  emulated_hue_name: "Kitchen Overhead"
+  friendly_name: "Kitchen Overhead"
+
+light.kitchen_table_level_5_0:
+  emulated_hue: true
+  emulated_hue_name: "Kitchen Table"
+  friendly_name: "Kitchen Table"
+
+group.porch_lights:
+  emulated_hue: true
+  emulated_hue_name: "Porch Lights"
+  friendly_name: "Porch Lights"
+
+group.kitchen_lights:
+  emulated_hue: true
+  emulated_hue_name: "Kitchen Lights"
+  friendly_name: "Kitchen Lights"

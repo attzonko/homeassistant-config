@@ -4,7 +4,7 @@
 - alias: "Alex Leaves Work"
   trigger:
     - platform: zone
-      entity_id: device_tracker.alexsiphone6plus
+      entity_id: device_tracker.alexiphone
       zone: zone.work
       event: leave
   condition:
@@ -33,31 +33,31 @@
       after: '14:00:00'
   condition:
     - condition: state
-      entity_id: device_tracker.alexsiphone6plus
+      entity_id: device_tracker.alexiphone
       state: 'work'
   action:
     - service: notify.telegram_home_assistant
       data:
-        message: Increased alexsiphone interval to 1 min
+        message: Increased alexiphone interval to 1 min after 2pm
     - service: device_tracker.icloud_set_interval
       data:
         account_name: alex
-        device_name: alexsiphone6plus
+        device_name: alexiphone
         interval: 1
 
 - alias: "Alex Arrives at School"
   trigger:
     - platform: zone
-      entity_id: device_tracker.alexsiphone6plus
+      entity_id: device_tracker.alexiphone
       zone: zone.school
       event: enter
   action:
     - service: notify.telegram_home_assistant
       data:
-        message: Increased alexsiphone interval to 1 min
+        message: Increased alexiphone interval to 1 min at Vista
     - service: device_tracker.icloud_set_interval
       data:
         account_name: alex
-        device_name: alexsiphone6plus
+        device_name: alexiphone
         interval: 1
 

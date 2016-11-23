@@ -5,17 +5,17 @@
 ################################################
 ## Default
 ################################################
-default_view:
-  name: Tzonkov Home
-  view: yes
-  entities:
-    - persistent_notification.update_available
-    - group.weather
-    - group.travel_time
-    - group.all_devices
-    - group.system_monitor
-    - group.input_boolean
-    - persistent_notification.httplogin
+#default_view:
+#  name: Tzonkov Home
+#  view: yes
+#  entities:
+#    - persistent_notification.update_available
+#    - group.weather
+#    - group.travel_time
+#    - group.all_devices
+#    - group.system_monitor
+#    - group.input_boolean
+#    - persistent_notification.httplogin
 
 
 ################################################

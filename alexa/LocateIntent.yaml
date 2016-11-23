@@ -7,18 +7,18 @@ speech:
   text: >
     {% if User.lower() in states.device_tracker|map(attribute='name')|map('lower') %}
         {% if User.lower() == "alex" %}
-            {% if states.device_tracker.alexsiphone6plus.state.lower() == "work" %}
+            {% if states.device_tracker.alexiphone.state.lower() == "work" %}
                 Alex is at work.
-            {% elif states.device_tracker.alexsiphone6plus.state.lower() == "not_home" %}
+            {% elif states.device_tracker.alexiphone.state.lower() == "not_home" %}
                 Alex is {{states.sensor.alex_to_home.state}} minutes from home.
             {% else %}
-                Alex is at {{states.device_tracker.alexsiphone6plus.state.lower()}}
+                Alex is at {{states.device_tracker.alexiphone.state.lower()}}
             {% endif %}
         {% elif User.lower() == "amy" %}     
-            {% if states.device_tracker.amysiphone6.state.lower() == "not_home" %}
+            {% if states.device_tracker.amyiphone.state.lower() == "not_home" %}
                 Amy is {{states.sensor.amy_to_home.state }} minutes from home.
             {% else %}
-                Amy is at {{states.device_tracker.amysiphone6.state.lower()}}
+                Amy is at {{states.device_tracker.amyiphone.state.lower()}}
             {% endif %}
         {% else %}
              I am currently not tracking {{User}}'s location.
