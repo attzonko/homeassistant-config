@@ -12,16 +12,39 @@ homeassistant:
   customize: !include_dir_merge_named customize
 
 frontend:
-history:
 logbook:
 sun:
 updater:
+  reporting: False
+
 emulated_hue:
   expose_by_default: false
 
 ################################################
 ## Testing Area
 ################################################
+history:
+  include:
+    entities:
+      - sensor.downstairs_temperature
+      - sensor.family_room_temperature
+      - sensor.upstairs_temperature
+      - sensor.jordans_room_temperature
+      - sensor.olivias_room_temperature
+      - sensor.playroom_temperature
+      - device_tracker.alexiphone
+      - device_tracker.amyiphone
+      - device_tracker.jordaniphone
+      - sensor.ram_use
+      - sensor.cpu_use
+      - sensor.cpu_temperature
+      - binary_sensor.downstairs_occupancy
+      - binary_sensor.family_room_occupancy
+      - binary_sensor.jordans_room_occupancy
+      - binary_sensor.olivias_room_occupancy
+      - binary_sensor.playroom_occupancy
+      - binary_sensor.upstairs_occupancy
+
 
 alexa:
   intents: !include_dir_named alexa
@@ -40,12 +63,12 @@ http:
 ifttt:
   key: !secret ifttt_key
 
-#ecobee:
-#  api_key: !secret ecobee_api_key
-#  hold_temp: false
+ecobee:
+  api_key: !secret ecobee_api_key
+  hold_temp: false
 
-#recorder:
-#  purge_days: 7
+recorder:
+  purge_days: 7
 
 mqtt:
   broker: 10.0.1.125

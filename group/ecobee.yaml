@@ -1,0 +1,18 @@
+Occupancy:
+  - binary_sensor.downstairs_occupancy
+  - binary_sensor.family_room_occupancy
+  - binary_sensor.jordans_room_occupancy
+  - binary_sensor.olivias_room_occupancy
+  - binary_sensor.playroom_occupancy
+  - binary_sensor.upstairs_occupancy
+
+Home Climate:
+  - configurator.ecobee
+  - climate.downstairs
+  - sensor.downstairs_temperature
+  - sensor.family_room_temperature
+  - climate.upstairs
+  - sensor.upstairs_temperature
+  - sensor.jordans_room_temperature
+  - sensor.olivias_room_temperature
+  - sensor.playroom_temperature
