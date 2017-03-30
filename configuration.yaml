@@ -18,6 +18,7 @@ updater:
   reporting: False
 
 emulated_hue:
+  type: alexa
   expose_by_default: false
 
 ################################################

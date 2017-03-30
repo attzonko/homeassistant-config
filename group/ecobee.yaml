@@ -11,8 +11,10 @@ Home Climate:
   - climate.downstairs
   - sensor.downstairs_temperature
   - sensor.family_room_temperature
+  - sensor.downstairs_humidity
   - climate.upstairs
   - sensor.upstairs_temperature
   - sensor.jordans_room_temperature
   - sensor.olivias_room_temperature
   - sensor.playroom_temperature
+  - sensor.upstairs_humidity
