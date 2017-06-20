@@ -5,8 +5,8 @@
 - alias: Startup Notification
   hide_entity: True
   trigger:
-    platform: event
-    event_type: homeassistant_start
+    platform: homeassistant
+    event: start
   action:
     service: notify.telegram_home_assistant
     data:

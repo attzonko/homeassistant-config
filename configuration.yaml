@@ -15,6 +15,7 @@ frontend:
 logbook:
 sun:
 updater:
+  include_used_components: true
   reporting: False
 
 emulated_hue:
@@ -29,7 +30,7 @@ history:
     entities:
       - sensor.downstairs_temperature
       - sensor.family_room_temperature
-      - sensor.upstairs_temperature
+      - sensor.bedroom_temperature
       - sensor.jordans_room_temperature
       - sensor.olivias_room_temperature
       - sensor.playroom_temperature
@@ -44,7 +45,7 @@ history:
       - binary_sensor.jordans_room_occupancy
       - binary_sensor.olivias_room_occupancy
       - binary_sensor.playroom_occupancy
-      - binary_sensor.upstairs_occupancy
+      - binary_sensor.bedroom_occupancy
 
 
 alexa:
@@ -60,6 +61,12 @@ http:
   ssl_certificate: !secret http_ssl_certificate
   ssl_key: !secret http_ssl_key
 
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api_key 
+    allowed_chat_ids:
+      - !secret telegram_home_chat_id
+      - !secret telegram_home_assistant_id
 
 ifttt:
   key: !secret ifttt_key
@@ -83,9 +90,11 @@ mqtt:
 ################################################
 
 logger: !include logger.yaml
-zwave: !include zwave.yaml
+zwave:
+  usb_path: /dev/zwave
+  new_entity_ids: true
 
-#camera: !include camera/cameras.yaml
+camera: !include camera/cameras.yaml
 
 ################################################
 ## Component Includes (Merge List)

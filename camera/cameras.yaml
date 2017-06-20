@@ -1,17 +1,24 @@
-- platform: mjpeg
-  mjpeg_url: !secret KITCHEN_CAM
-  name: Kitchen
-  username: !secret camera_username
-  password: !secret camera_password
+- platform: foscam
+  ip: !secret foscam_ip_kitchen
+  port: !secret foscam_port
+  username: !secret foscam_username
+  password: !secret foscam_password
+  name: 'kitchen'
 
-- platform: mjpeg
-  mjpeg_url: !secret BONUS_CAM
-  name: Bonus Room
-  username: !secret camera_username
-  password: !secret camera_password
+#- platform: mjpeg
+#  mjpeg_url: !secret KITCHEN_CAM
+#  name: Kitchen
+#  username: !secret camera_username
+#  password: !secret camera_password
 
-- platform: mjpeg
-  mjpeg_url: !secret LIVING_CAM
-  name: Living Room
-  username: !secret camera_username
-  password: !secret camera_password
+#- platform: mjpeg
+#  mjpeg_url: !secret BONUS_CAM
+#  name: Bonus Room
+#  username: !secret camera_username
+#  password: !secret camera_password
+
+#- platform: mjpeg
+#  mjpeg_url: !secret LIVING_CAM
+#  name: Living Room
+#  username: !secret camera_username
+#  password: !secret camera_password

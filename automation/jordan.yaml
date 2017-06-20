@@ -43,7 +43,7 @@
 #- alias: Increase icloud interval after 2pm
 #  trigger:
 #    - platform: time
-#      after: '14:00:00'
+#      at: '14:00:00'
 #  condition:
 #    - condition: state
 #      entity_id: device_tracker.jordaniphone

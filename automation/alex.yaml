@@ -14,7 +14,7 @@
 #        entity_id: input_boolean.leaving_work
 #        state: 'on'
 #      - condition: time
-#        after: '14:00:00'
+#        at: '14:00:00'
 #        before: '21:00:00'
 #        weekday:
 #          - mon
@@ -30,7 +30,7 @@
 #- alias: Increase icloud interval after 2pm
 #  trigger:
 #    - platform: time
-#      after: '14:00:00'
+#      at: '14:00:00'
 #  condition:
 #    - condition: state
 #      entity_id: device_tracker.alexiphone
