@@ -1,63 +1,63 @@
 ################################################################
 ## Automation / Alex Work
 ################################################################
-- alias: "Alex Leaves Work"
-  trigger:
-    - platform: zone
-      entity_id: device_tracker.alexiphone
-      zone: zone.work
-      event: leave
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: input_boolean.leaving_work
-        state: 'on'
-      - condition: time
-        after: '14:00:00'
-        before: '21:00:00'
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
-  action:
-    service: notify.telegram_home_chat
-    data:
-      message: Alex has left work.
+#- alias: "Alex Leaves Work"
+#  trigger:
+#    - platform: zone
+#      entity_id: device_tracker.alexiphone
+#      zone: zone.work
+#      event: leave
+#  condition:
+#    condition: and
+#    conditions:
+#      - condition: state
+#        entity_id: input_boolean.leaving_work
+#        state: 'on'
+#      - condition: time
+#        after: '14:00:00'
+#        before: '21:00:00'
+#        weekday:
+#          - mon
+#          - tue
+#          - wed
+#          - thu
+#          - fri
+#  action:
+#    service: notify.telegram_home_chat
+#    data:
+#      message: Alex has left work.
 
-- alias: Increase icloud interval after 2pm
-  trigger:
-    - platform: time
-      after: '14:00:00'
-  condition:
-    - condition: state
-      entity_id: device_tracker.alexiphone
-      state: 'work'
-  action:
-    - service: notify.telegram_home_assistant
-      data:
-        message: Increased alexiphone interval to 1 min after 2pm
-    - service: device_tracker.icloud_set_interval
-      data:
-        account_name: alex
-        device_name: alexiphone
-        interval: 1
+#- alias: Increase icloud interval after 2pm
+#  trigger:
+#    - platform: time
+#      after: '14:00:00'
+#  condition:
+#    - condition: state
+#      entity_id: device_tracker.alexiphone
+#      state: 'work'
+#  action:
+#    - service: notify.telegram_home_assistant
+#      data:
+#        message: Increased alexiphone interval to 1 min after 2pm
+#    - service: device_tracker.icloud_set_interval
+#      data:
+#        account_name: alex
+#        device_name: alexiphone
+#        interval: 1
 
-- alias: "Alex Arrives at School"
-  trigger:
-    - platform: zone
-      entity_id: device_tracker.alexiphone
-      zone: zone.school
-      event: enter
-  action:
-    - service: notify.telegram_home_assistant
-      data:
-        message: Increased alexiphone interval to 1 min at Vista
-    - service: device_tracker.icloud_set_interval
-      data:
-        account_name: alex
-        device_name: alexiphone
-        interval: 1
+#- alias: "Alex Arrives at School"
+#  trigger:
+#    - platform: zone
+#      entity_id: device_tracker.alexiphone
+#      zone: zone.school
+#      event: enter
+#  action:
+#    - service: notify.telegram_home_assistant
+#      data:
+#        message: Increased alexiphone interval to 1 min at Vista
+#    - service: device_tracker.icloud_set_interval
+#      data:
+#        account_name: alex
+#        device_name: alexiphone
+#        interval: 1
 

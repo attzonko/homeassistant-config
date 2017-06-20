@@ -1,9 +1,9 @@
 ################################################################
 ## Group / Travel Time
 ################################################################
-travel_time:
-  name: Travel Times
-  entities:
-    - sensor.alex_to_home  
-    - sensor.amy_to_home
-    - sensor.jordan_to_home
+#travel_time:
+#  name: Travel Times
+#  entities:
+#    - sensor.alex_to_home  
+#    - sensor.amy_to_home
+#    - sensor.jordan_to_home

@@ -11,7 +11,7 @@
   home_interval: 1
   interval_seconds: 15
   consider_home: 300
-- platform: icloud
-  account_name: alex
-  username: !secret icloud_username
-  password: !secret icloud_password
+#- platform: icloud
+#  account_name: alex
+#  username: !secret icloud_username
+#  password: !secret icloud_password

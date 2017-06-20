@@ -12,29 +12,29 @@
 #  options:
 #    mode: driving
 
-- platform: google_travel_time
-  name: Jordan to Home
-  api_key: !secret google_travel_api
-  origin: device_tracker.jordaniphone
-  destination: zone.home
-  options:
-    mode: driving
+#- platform: google_travel_time
+#  name: Jordan to Home
+#  api_key: !secret google_travel_api
+#  origin: device_tracker.jordaniphone
+#  destination: zone.home
+#  options:
+#    mode: driving
 
-- platform: google_travel_time
-  name: Amy to Home
-  api_key: !secret google_travel_api
-  origin: device_tracker.amyiphone
-  destination: zone.home
-  options:
-    mode: driving
+#- platform: google_travel_time
+#  name: Amy to Home
+#  api_key: !secret google_travel_api
+#  origin: device_tracker.amyiphone
+#  destination: zone.home
+#  options:
+#    mode: driving
 
-- platform: google_travel_time
-  name: Alex to Home
-  api_key: !secret google_travel_api
-  origin: device_tracker.alexiphone
-  destination: zone.home
-  options:
-    mode: driving
+#- platform: google_travel_time
+#  name: Alex to Home
+#  api_key: !secret google_travel_api
+#  origin: device_tracker.alexiphone
+#  destination: zone.home
+#  options:
+#    mode: driving
 
 #- platform: google_travel_time
 #  name: Work to Home

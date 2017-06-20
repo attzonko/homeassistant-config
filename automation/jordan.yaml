@@ -1,59 +1,59 @@
 ################################################################
 ## Automation / Jordan School
 ################################################################
-- alias: "Jordan Leaves School"
-  trigger:
-    - platform: zone
-      entity_id: device_tracker.jordaniphone
-      zone: zone.school
-      event: leave
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: input_boolean.leaving_school
-        state: 'on'
-      - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
-  action:
-    service: notify.telegram_home_chat
-    data:
-      message: Jordan left school.
-
-- alias: "Jordan Arrives at School"
-  trigger:
-    - platform: zone
-      entity_id: device_tracker.jordaniphone
-      zone: zone.school
-      event: enter
-  condition:
-    condition: state
-    entity_id: input_boolean.entering_school
-    state: 'on'
-  action:
-    service: notify.telegram_home_chat
-    data:
-      message: Jordan got to school.
-
-- alias: Increase icloud interval after 2pm
-  trigger:
-    - platform: time
-      after: '14:00:00'
-  condition:
-    - condition: state
-      entity_id: device_tracker.jordaniphone
-      state: 'school'
-  action:
-    - service: notify.telegram_home_assistant
-      data:
-        message: Increased jordaniphone interval to 1 min after 2pm
-    - service: device_tracker.icloud_set_interval
-      data:
-        account_name: alex
-        device_name: jordaniphone
-        interval: 1
+#- alias: "Jordan Leaves School"
+#  trigger:
+#    - platform: zone
+#      entity_id: device_tracker.jordaniphone
+#      zone: zone.school
+#      event: leave
+#  condition:
+#    condition: and
+#    conditions:
+#      - condition: state
+#        entity_id: input_boolean.leaving_school
+#        state: 'on'
+#      - condition: time
+#        weekday:
+#          - mon
+#          - tue
+#          - wed
+#          - thu
+#          - fri
+#  action:
+#    service: notify.telegram_home_chat
+#    data:
+#      message: Jordan left school.
+#
+#- alias: "Jordan Arrives at School"
+#  trigger:
+#    - platform: zone
+#      entity_id: device_tracker.jordaniphone
+#      zone: zone.school
+#      event: enter
+#  condition:
+#    condition: state
+#    entity_id: input_boolean.entering_school
+#    state: 'on'
+#  action:
+#    service: notify.telegram_home_chat
+#    data:
+#      message: Jordan got to school.
+#
+#- alias: Increase icloud interval after 2pm
+#  trigger:
+#    - platform: time
+#      after: '14:00:00'
+#  condition:
+#    - condition: state
+#      entity_id: device_tracker.jordaniphone
+#      state: 'school'
+#  action:
+#    - service: notify.telegram_home_assistant
+#      data:
+#        message: Increased jordaniphone interval to 1 min after 2pm
+#    - service: device_tracker.icloud_set_interval
+#      data:
+#        account_name: alex
+#        device_name: jordaniphone
+#        interval: 1
