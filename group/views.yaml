@@ -33,13 +33,13 @@ lights_view:
 ################################################
 ## Camera View
 ################################################
-camera_view:
-  name: Cameras
-  view: yes
-  entities: 
-    - camera.kitchen
-    - camera.bonus_room
-    - camera.living_room
+#camera_view:
+#  name: Cameras
+#  view: yes
+#  entities: 
+#    - camera.kitchen
+#    - camera.bonus_room
+#    - camera.living_room
 
 ################################################
 ## Automations

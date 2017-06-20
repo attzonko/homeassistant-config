@@ -84,7 +84,8 @@ mqtt:
 
 logger: !include logger.yaml
 zwave: !include zwave.yaml
-camera: !include camera/cameras.yaml
+
+#camera: !include camera/cameras.yaml
 
 ################################################
 ## Component Includes (Merge List)
