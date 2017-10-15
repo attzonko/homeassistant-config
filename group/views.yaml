@@ -17,6 +17,7 @@ default_view:
     - group.input_boolean
     - group.home_climate
     - group.occupancy
+    - group.certificate_expiry
     - persistent_notification.httplogin
 
 
@@ -40,7 +41,7 @@ camera_view:
     - camera.kitchen
 
 ################################################
-## Automations
+## Automations View
 ################################################
 automations_view:
   name: Automation
@@ -49,7 +50,7 @@ automations_view:
     - group.all_automations
 
 ################################################
-## Media
+## Media View
 ################################################
 media_view:
   name: Media
@@ -60,7 +61,7 @@ media_view:
     - media_player.plex_web_chrome
 
 ################################################
-## Weather
+## Weather View
 ################################################
 weather_view:
   name: Weather

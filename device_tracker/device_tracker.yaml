@@ -10,7 +10,7 @@
   hosts: !secret nmap_range
   track_new_devices: no
   home_interval: 1
-  interval_seconds: 15
+  interval_seconds: 30
   consider_home: 300
 #- platform: icloud
 #  account_name: alex
