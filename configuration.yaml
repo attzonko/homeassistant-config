@@ -71,6 +71,10 @@ telegram_bot:
 ifttt:
   key: !secret ifttt_key
 
+ring:
+  username: !secret RING_USERNAME
+  password: !secret RING_PASSWORD
+
 ecobee:
   api_key: !secret ecobee_api_key
   hold_temp: false

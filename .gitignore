@@ -63,3 +63,4 @@ secrets.yaml
 components
 deps
 www
+.ring_cache.pickle
