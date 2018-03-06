@@ -59,6 +59,7 @@ media_view:
     - media_player.rasplexfam
     - media_player.alexs_iphone_6_plus
     - media_player.plex_web_chrome
+    - media_player.family_room
 
 ################################################
 ## Weather View

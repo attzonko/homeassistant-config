@@ -4,7 +4,7 @@
 - alias: Turn on kitchen lights when watching Plex
   trigger:
     platform: state
-    entity_id: media_player.rasplexfam
+    entity_id: media_player.family_room_2
     from: 'playing'
   condition:
     condition: and
@@ -23,7 +23,7 @@
 - alias: Turn off kitchen lights when watching Plex
   trigger:
     platform: state
-    entity_id: media_player.rasplexfam
+    entity_id: media_player.family_room_2
     to: 'playing'
   condition:
     condition: and
