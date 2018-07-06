@@ -7,3 +7,6 @@
   - platform: cert_expiry
     host: !secret NAME_URL
     name: "Last Name"
+  - platform: cert_expiry
+    host: !secret MMPY_BOT_URL
+    name: "mmpy bot"

@@ -2,3 +2,4 @@ Certificate Expiry:
 - sensor.home_address
 - sensor.rental_address
 - sensor.last_name
+- sensor.mmpy_bot
